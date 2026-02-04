@@ -1,0 +1,29 @@
+server:
+  internalPort: 5005
+  externalPort: 5005
+  runMode: release
+  domain: localhost
+logger:
+  filePath: /app/logs/
+  encoding: json
+  level: info
+  logger: zap
+cors:
+  allowOrigins: "*"
+Auth:
+  Endpoint: ${AUTH_ENDPOINT}
+  ClientID: ${AUTH_CLIENT_ID}
+  ClientSecret: ${AUTH_CLIENT_SECRET}
+  Certificate: ${AUTH_CERTIFICATE}
+  Organization: ${AUTH_ORGANIZATION}
+  Application: ${AUTH_APPLICATION}
+Gorm:
+  host: ${DB_HOST}
+  port: ${DB_PORT}
+  user: ${DB_USER}
+  password: ${DB_PASSWORD}
+  dbName: ${DB_NAME}
+  sslMode: ${DB_SSL_MODE}
+  maxIdleConns: 15
+  maxOpenConns: 100
+  connMaxLifetime: 5

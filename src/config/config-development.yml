@@ -1,0 +1,50 @@
+server:
+  internalPort: 5005
+  externalPort: 5005
+  runMode: debug
+  domain: localhost
+logger:
+  filePath: ../logs/
+  encoding: json
+  level: debug
+  logger: zap
+cors:
+  allowOrigins: "*"
+Auth:
+  Endpoint: http://localhost:8000
+  ClientID: your_client_id_here
+  ClientSecret: your_client_secret_here
+  Certificate: 
+  Organization: your_organization
+  Application: your_application
+Gorm:
+  host: localhost 
+  port: 5432
+  user: postgres
+  password: your_password_here
+  dbName: your_database_name
+  sslMode: disable
+  maxIdleConns: 15
+  maxOpenConns: 100
+  connMaxLifetime: 5
+# OTP:
+#   ExpireTime: 5m
+# 	Digits:     6
+# 	Limiter:    1m
+# redis:
+#   host: localhost
+#   port: 6379
+#   password: password
+#   db: 0
+#   dialTimeout: 5
+#   readTimeout: 5
+#   writeTimeout: 5
+#   poolSize: 10
+#   poolTimeout: 15
+#   idleCheckFrequency: 500
+# jwt:
+#   secret: "mySecretKey"
+#   refreshSecret: "mySecretKey"
+#   accessTokenExpireDuration: 1440
+#   refreshTokenExpireDuration: 60
+
